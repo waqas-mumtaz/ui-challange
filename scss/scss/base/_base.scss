@@ -1,0 +1,88 @@
+body, h1, h2, h3, h4, h5, h6, p, a{
+  color: $charcol;
+}
+
+.container{
+  @include mq('desktop') {
+    max-width: 960px;
+  }
+}
+
+.bg-white{
+  background: $white;
+}
+
+.bb-light{
+  border-bottom: 0.01rem solid #d5d5d5;
+}
+
+.bt-light{
+  border-top: 0.01rem solid #e3e3e3;
+}
+
+.bl-light{
+  border-left: 0.01rem solid #e3e3e3;
+}
+.br-light{
+  border-right: 0.01rem solid #e3e3e3;
+}
+.b-light{
+  border: 0.01rem solid #e3e3e3;
+}
+
+
+.link-default{
+  color: $default;
+
+  &:hover{
+    color: darken($default, 5%);
+    text-decoration: none;
+  }
+}
+
+.link-dark{
+  color: $default-dark;
+  font-weight: 500;
+
+  &:hover{
+    color: $charcol;
+    text-decoration: none;
+  }
+}
+
+
+
+.main{
+  min-height: 30vh;
+  background: #fdfdfd;
+  padding:4rem 0 4rem 0;
+}
+
+py-sm{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222222;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+  background-color: $charcol;
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+  background-color: transparent;
+  display: none;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+  background-color: #222222;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+

@@ -1,0 +1,54 @@
+header{
+
+  border-bottom: 1px solid #e4e4e4;
+
+  .brand-wrap{
+    @include padding(1rem,0.5rem,0.5rem,0.5rem);
+    a{
+      img{
+        max-width: 155px ;
+      }
+    }
+  }
+
+  .top-details{
+    @include padding(1.5rem,0.5rem,0.5rem,0.5rem);
+    p{
+      span{
+        &.txt{
+          @include mq('tablet-wide', 'max') {
+            display: none;
+          }
+
+          @include mq('desktop') {
+            display: inline-block;
+          }
+
+        }
+      }
+      a{
+        padding-left: 1rem;
+
+        i{
+          transform: rotate(90deg);
+          @include mq('phone-wide', 'max') {
+            font-size: 1.2rem;
+            margin-top: 0.3rem;
+          }
+        }
+        span{
+          padding-left: 0.5rem;
+          font-weight: bold;
+          text-decoration: underline;
+          @include mq('phone-wide','max') {
+            display: none;
+          }
+          @include mq('tablet') {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+} // header

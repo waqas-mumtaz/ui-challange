@@ -1,0 +1,213 @@
+//main layout
+
+main {
+  @include padding(4rem, 0rem, 4rem, 0rem);
+
+  .welcome-text {
+    padding-bottom: 2rem;
+    @include mq('phone-wide', 'max') {
+      padding: 1rem;
+    }
+    h1 {
+      font-size: $xxl-font;
+
+      &.show-md {
+        @include mq('phone-wide', 'max') {
+          display: none;
+        }
+      }
+      &.show-sm {
+        @include mq('phone-wide') {
+          display: none;
+        }
+      }
+    }
+    p {
+      color: $default;
+      font-size: $md-font;
+      padding: 0.1rem;
+    }
+  }
+
+  .home-section {
+    border: 1px solid #e4e4e4;
+
+    img {
+      width: 100%;
+    }
+    .col-sm-6 {
+      @include mq('tablet-wide', 'max') {
+        max-width: 50% !important;
+        width: 50%;
+        flex: 0 0 50%;
+      }
+      @include mq('phablet', 'max') {
+        max-width: 100% !important;
+        width: 100%;
+        flex: 0 0 100%;
+      }
+    }
+
+    .house-info-wrap {
+      @include mq('tablet-wide', 'max') {
+        padding: 1rem 0;
+      }
+    }
+    .house-info {
+      @include mq('tablet-wide', 'max') {
+        padding-bottom: 1rem;
+      }
+      .info-label {
+        display: inline-block;
+        text-transform: uppercase;
+        @include mq('desktop') {
+          width: 30%;
+        }
+        @include mq('tablet-wide', 'max') {
+          width: 100%;
+        }
+        p {
+          color: $default;
+        }
+      }
+
+      .details {
+        display: inline-block;
+        @include mq('desktop') {
+          width: 65%;
+        }
+      }
+    }
+
+    .items {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #e4e4e4;
+
+      li {
+        list-style: none;
+        font-size: $xs-font;
+        font-weight: bold;
+
+        .col-sm-12 {
+          @include mq('tablet', 'max') {
+            max-width: 100% !important;
+            width: 100%;
+            flex: 0 0 100%;
+          }
+        }
+
+        &.no-display-sm {
+          @include mq('tablet-wide', 'max') {
+            display: none;
+          }
+        }
+        img {
+          width: 35px;
+          margin-right: 0.5rem;
+          @include mq('phablet', 'max') {
+            display: none;
+          }
+        }
+        &.no-child {
+          padding: 0.7rem 1rem 0.7rem;
+        }
+
+        .desc {
+          font-size: $xs-font;
+          color: $default;
+          padding-top: 0.5rem;
+        }
+        .head {
+          background: #f3f3f2;
+          padding: 0.5rem 1rem 1rem;
+          border-bottom: 1px solid #e4e4e4;
+
+          #folder-icon{
+            display: inline-block;
+            position: relative;
+
+            i{
+              color: #a7a7a7;
+              padding-top: 1rem;
+              font-size: 1.7rem;
+              position: absolute;
+              top: -30px;
+              left: -10px;
+            }
+          }
+          p{
+            display: inline-block;
+            padding-left: 2rem;
+            position: relative;
+            top: 5px;
+          }
+        }
+        .custom-checkbox {
+          width: 7%;
+          display: inline-block;
+          label {
+            i {
+              font-size: $xs-font;
+              padding-top: 0.4rem;
+              color: $default;
+            }
+          }
+        }
+
+        .text-info {
+          display: inline-block;
+          width: 75%;
+        }
+      }
+
+      .nested {
+        padding: 0;
+        li {
+          padding: 0.8rem 1rem 0.8rem;
+
+          .pdl-3 {
+            padding-left: 3rem;
+          }
+        }
+      }
+    }
+
+    p {
+      padding: 0.5rem 0;
+      margin: 0;
+
+      @include mq('tablet', 'max') {
+        padding: 0;
+      }
+      &.item-desc {
+        font-weight: 500;
+        font-size: $xxs-font;
+        color: $default;
+      }
+    }
+
+    a.btn {
+      display: block;
+      background: #f4bc41;
+      text-transform: uppercase;
+      color: #fff;
+      border-radius: 2px;
+      padding: 0.5rem 0;
+      border-bottom: 2px solid #deab39;
+    }
+
+    i {
+      &.fa-download, &.fa-eye {
+        color: $default;
+        padding-top: 0.7rem;
+        &:hover {
+          color: $charcol;
+        }
+      }
+    }
+  }
+}
+
+
